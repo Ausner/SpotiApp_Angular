@@ -1,0 +1,8 @@
+<div class="row dark">
+    <div class="dark">
+        <input style="width: 94%;" #termino type="text" (keyup)="buscar(termino.value)" class="form.control" placeholder="Search Artist...">
+    </div>
+</div>
+
+<app-loadin *ngIf="loading" class="m-5"></app-loadin>
+<app-tarjetas *ngIf="!loading" [items]="artists"></app-tarjetas>
